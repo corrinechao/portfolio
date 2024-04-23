@@ -1,0 +1,153 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Overlock+SC&display=swap');
+
+* {
+    background-color: #fffcf5;
+    padding: 0;
+    margin: 0;
+    font-family: "Overlock SC", sans-serif;
+    box-sizing: border-box;
+}
+
+/*================== nav ======================*/
+nav {
+    z-index: 100000;
+    position: fixed;
+    display: flex;
+    min-height: 60px;
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    top: 0;
+    box-sizing: border-box;
+    font-family: "Overlock SC", sans-serif;
+}
+
+header {
+    flex: 1;
+    padding: 10px;
+    padding-left: 30px;
+}
+
+header a {
+    letter-spacing: 0.3em;
+    font-size: 30px;
+}
+
+.ul {
+    flex: 9;
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+    flex: 1;
+    display: inline-block;
+    padding: 10px;
+    padding-right: 30px;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #0E394E;
+}
+
+a:hover {
+    color: #A7C4A0;
+}
+
+/*================== main ======================*/
+.row {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 50px;
+}
+
+.box{
+    overflow: hidden;
+}
+
+.column img {
+    margin-top: 100px;
+    vertical-align: middle;
+    width: 100%;
+
+    /*transition放在hover只會有一半*/
+    -ms-transform: scale(1, 1);
+    /*IE 9*/
+    -webkit-transform: scale(1, 1);
+    /*Safari*/
+    transform: scale(1, 1);
+    /*Standard syntax*/
+
+    transition: transform 1.5s;
+    -webkit-transition: transform 1.5s;
+    /*Safari*/
+
+    transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+}
+
+.column a:hover img{
+    -ms-transform: scale(1.2, 1.2);
+	/*IE 9*/
+	-webkit-transform: scale(1.2, 1.2);
+	/*Safari*/
+	transform: scale(1.2, 1.2);
+	/*Standard syntax*/
+
+}
+
+p {
+    padding-top: 10px;
+}
+
+.column img{
+    animation: fade-in linear;
+    animation-timeline: view(250px);
+}
+
+@keyframes fade-in{
+    from{scale: 0.8; opacity: 0;}
+    to{scale: 1; opacity: 1;}
+}
+
+
+
+/*================== footer ======================*/
+footer {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0E394E;
+}
+
+
+/*================== responsive ======================*/
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}

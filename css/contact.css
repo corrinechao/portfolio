@@ -1,0 +1,150 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Overlock+SC&display=swap');
+
+* {
+    background-color: #fffcf5;
+    padding: 0;
+    margin: 0;
+    font-family: "Overlock SC", sans-serif;
+    box-sizing: border-box;
+}
+
+/*================== nav ======================*/
+nav {
+    z-index: 100000;
+    position: fixed;
+    display: flex;
+    min-height: 60px;
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    top: 0;
+    box-sizing: border-box;
+    font-family: "Overlock SC", sans-serif;
+}
+
+header {
+    flex: 1;
+    padding: 10px;
+    padding-left: 30px;
+}
+
+header a {
+    letter-spacing: 0.3em;
+    font-size: 30px;
+}
+
+.ul {
+    flex: 9;
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+    flex: 1;
+    display: inline-block;
+    padding: 10px;
+    padding-right: 30px;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #0E394E;
+}
+
+a:hover {
+    color: #A7C4A0;
+}
+
+
+/*================== frontpage ======================*/
+
+.front {
+    position: relative;
+    width: 95%;
+    height: 740px;
+    overflow: hidden;
+    /*移出容器多的地方*/
+    margin: 100px auto 0px;
+}
+
+.logo {
+    position: absolute;
+    box-sizing: border-box;
+    width: 50%;
+    padding: 30px;
+    z-index: 20;
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    margin-left: 400px;
+
+
+
+    /*動畫*/
+    animation-name: ant;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+
+    -webkit-animation-name: ant;
+    /*動畫名稱*/
+    -webkit-animation-duration: 3s;
+    /*動畫時間3秒*/
+    -webkit-animation-iteration-count: 1;
+    /*播放次數1次*/
+    -webkit-animation-timing-function: ease;
+    /*動畫方式漸慢開始與結束*/
+    -webkit-animation-delay: 0s;
+    /*0秒後播放*/
+    -webkit-animation-duration: normal;
+    /*動畫播放順序為順向 */
+    -webkit-animation-fill-mode: forwards;
+    /*動畫結束後停格於最後一格，需搭配direction*/
+}
+
+@keyframes ant {
+    from {
+        top: 0px;
+    }
+
+    to {
+        opacity: 1;
+        top: 100px;
+    }
+}
+
+
+.logo h1 {
+    font-size: 80px;
+    color: #0E394E;
+    font-family: "Overlock SC", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    line-height: 1.2em;
+}
+
+.info {
+    margin-top: 50px;
+}
+
+.info li {
+    list-style: none;
+    color: #0E394E;
+    margin-top: 40px;
+    margin-left: 200px;
+    letter-spacing: 0.3em;
+    line-height: 1.5em;
+    font-size: 1.2em;
+}
+
+/*================== footer ======================*/
+footer {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0E394E;
+}
