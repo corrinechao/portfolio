@@ -115,17 +115,6 @@ p {
     padding-top: 10px;
 }
 
-.column img{
-    animation: fade-in linear;
-    animation-timeline: view(250px);
-}
-
-@keyframes fade-in{
-    from{scale: 0.8; opacity: 0;}
-    to{scale: 1; opacity: 1;}
-}
-
-
 
 /*================== footer ======================*/
 footer {
